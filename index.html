@@ -1,0 +1,259 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paptos Base Client Info</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px; 
+            box-sizing: border-box; 
+            color: #333; 
+        }
+        .title-container {
+            position: relative; 
+            text-align: center;
+            margin-bottom: 30px;
+            padding-top: 20px; 
+            padding-bottom: 20px; 
+        }
+        .graffiti {
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%) rotate(-5deg); 
+            font-family: 'Courier New', Courier, monospace; 
+            font-size: 2.5em; 
+            font-weight: bold;
+            color: #ff0000; 
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5); 
+            z-index: 2; 
+            white-space: nowrap; 
+        }
+        .subtitle {
+            font-size: 1.2em; 
+            color: #555;
+            position: relative; 
+            z-index: 1;
+            margin-top: 30px; 
+        }
+
+        .content-container {
+            width: 100%;
+            max-width: 800px; 
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-sizing: border-box; 
+        }
+
+        .image-wrapper {
+            text-align: center; 
+            margin-bottom: 20px;
+        }
+
+        .image-wrapper img {
+            max-width: 100%; 
+            height: auto;
+            display: block; 
+            margin: 0 auto; 
+        }
+        .image-wrapper:first-of-type img {
+             width: 69%; 
+             min-width: 200px; 
+        }
+
+        details {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            padding: 0; 
+            overflow: hidden; 
+        }
+
+        summary {
+            display: block; 
+            cursor: pointer;
+            padding: 10px 15px;
+            outline: none; 
+            font-weight: bold;
+            background-color: #eee;
+            border-bottom: 1px solid #ddd;
+            user-select: none; 
+        }
+
+        summary::-webkit-details-marker {
+            display: none; 
+        }
+
+        summary::before {
+            content: '►'; 
+            display: inline-block;
+            margin-right: 10px;
+            transform: rotate(0deg);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        details[open] > summary::before {
+            transform: rotate(90deg);
+        }
+
+        summary h2 { 
+            display: inline; 
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        details > div {
+            padding: 10px 15px;
+            line-height: 1.6;
+        }
+
+        details > div ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        details > div li {
+            margin-bottom: 5px;
+        }
+
+        details > div p,
+        details > div h3 {
+             margin-top: 10px;
+             margin-bottom: 10px;
+        }
+
+        details > div p:first-child,
+        details > div h3:first-child {
+             margin-top: 0;
+        }
+
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        }
+
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .title-container {
+                 padding-top: 15px;
+                 padding-bottom: 15px;
+                 margin-bottom: 20px;
+            }
+            .graffiti {
+                font-size: 1.8em;
+            }
+            .subtitle {
+                font-size: 1em;
+                margin-top: 20px; 
+            }
+            .content-container {
+                padding: 10px; 
+            }
+            summary {
+                padding: 8px 10px; 
+            }
+             summary h2 {
+                font-size: 1.1em;
+            }
+            details > div {
+                padding: 8px 10px; 
+            }
+            .image-wrapper:first-of-type img {
+                 width: 80%; 
+                 min-width: unset; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <div class="graffiti">Paptos base client</div>
+        <div class="subtitle">❌ Client Information ❌</div>
+    </div>
+
+    <div class="content-container">
+        <div class="image-wrapper">
+             <img src="https://i.imgur.com/ZiJ0r7y.png" alt="Screenshot of client UI">
+        </div>
+
+        <div class="image-wrapper">
+             <img src="assets/U03-01-20-U12-05-01-14.png" alt="Another screenshot of client UI">
+        </div>
+
+        <details>
+            <summary><h2>Information</h2></summary>
+            <div>
+                <p>Minecraft version: <code>Fabric</code> 1.21.4</p>
+                <p>Default ClickGui keybind - <strong><code>P</code></strong></p>
+                <p>Default prefix - <strong><code>@</code></strong></p>
+                <p>Middle click the module to bind it.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary><h2>Requires these mods:</h2></summary>
+            <div>
+                <ul>
+                    <li><a href="https://modrinth.com/mod/fabric-api/version/0.119.2+1.21.4" target="_blank" rel="noopener noreferrer">FabricApi 1.21.4</a></li>
+                    <li><a href="https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html" target="_blank" rel="noopener noreferrer">Java 21+</a></li>
+                </ul>
+            </div>
+        </details>
+
+        <details>
+            <summary><h2>Recommended to read:</h2></summary>
+            <div>
+                <ul>
+                    <li><a href="https://gist.github.com/HexedHero/aab340a84db51913cb1106c2d85f4e4f" target="_blank" rel="noopener noreferrer">Performance guide for Minecraft 1.20.4+ Clients</a></li>
+                    <li><a href="https://thunderguidemc.vercel.app/" target="_blank" rel="noopener noreferrer">Setup guide by @DevilishRak</a></li>
+                </ul>
+            </div>
+        </details>
+
+        <details>
+            <summary><h2>Credits</h2></summary>
+            <div>
+                <ul>
+                    <li><a href="https://www.youtube.com/@Ai_24" target="_blank" rel="noopener noreferrer">Ai_24</a> for cool showcase</li>
+                    <li><a href="https://www.youtube.com/@KiLABGaming" target="_blank" rel="noopener noreferrer">KiLAB Gaming</a> for complete overview</li>
+                    <li><a href="https://github.com/meteordevelopment" target="_blank" rel="noopener noreferrer">@meteordevelopment</a> for orbit</li>
+                    <li><a href="https://github.com/ladysnake" target="_blank" rel="noopener noreferrer">@ladysnake</a> for satin</li>
+                    <li><a href="https://github.com/0x3C50/Renderer" target="_blank" rel="noopener noreferrer">@0x3C50</a> for the renderer</li>
+                    <li><a href="https://github.com/Pan4ur" target="_blank" rel="noopener noreferrer">pan4er</a> for making client</li>
+                </ul>
+                <h3>Resources</h3>
+                <ul>
+                     <li><a href="https://github.com/cvs0/ThunderHack-Recode-Addon-Template" target="_blank" rel="noopener noreferrer">Addon Template</a> by cvs0</li>
+                </ul>
+            </div>
+        </details>
+
+    </div>
+</body>
+</html>
